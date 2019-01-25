@@ -14,7 +14,7 @@ spec.name                  = "ImageAndFieldControl"
 spec.summary               = "A set of controls with an image and input area."
 spec.requires_arc          = true
 
-spec.version               = "1.0.3"
+spec.version               = "1.0.4"
 
 spec.license               = { :type => "MIT", :file => "LICENSE" }
 

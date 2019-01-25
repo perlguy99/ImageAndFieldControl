@@ -12,6 +12,8 @@ import FontAwesome_swift
 @IBDesignable
 public class ImageAndFieldBase: UIView {
     
+    var defaultImageSize: CGFloat = 30.0
+    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     
@@ -39,11 +41,14 @@ public class ImageAndFieldBase: UIView {
     }
     
     
-    public func setFAImage(image: FontAwesome, style: FontAwesomeStyle? = .regular, color: UIColor? = .black, size: CGFloat? = 30.0) {
-        var imageSize = CGSize(width: 30, height: 30)
+    public func setFAImage(image: FontAwesome, style: FontAwesomeStyle? = nil, color: UIColor? = nil, size: CGFloat? = nil) {
+        var imageSize = CGSize.zero
         
         if let size = size {
             imageSize = CGSize(width: size, height: size)
+        }
+        else {
+            imageSize = CGSize(width: defaultImageSize, height: defaultImageSize)
         }
         
         imageView.image = UIImage.fontAwesomeIcon(name: image, style: style ?? .regular, textColor: color ?? .black, size: imageSize)
