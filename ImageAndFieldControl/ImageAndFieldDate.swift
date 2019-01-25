@@ -104,6 +104,13 @@ public class ImageAndFieldDate: ImageAndFieldBase {
         }
     }
     
+    @IBInspectable
+    public var labelLeftTextInset: CGFloat = 0 {
+        didSet {
+            pickerLabel.leftInset = labelLeftTextInset
+        }
+    }
+    
     
     // MARK: - Interface Builder
     override public func prepareForInterfaceBuilder() {
