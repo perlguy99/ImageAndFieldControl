@@ -73,7 +73,7 @@ public class ImageAndFieldTextInput: ImageAndFieldBase {
     
     
     // MARK: - Interface Builder
-    override func prepareForInterfaceBuilder() {
+    override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
     }
     
