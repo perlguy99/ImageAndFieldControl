@@ -46,9 +46,11 @@ public class ImageAndFieldBase: UIView {
         
         if let size = size {
             imageSize = CGSize(width: size, height: size)
+            imageHeight = size
         }
         else {
             imageSize = CGSize(width: defaultImageSize, height: defaultImageSize)
+            imageHeight = defaultImageSize
         }
         
         imageView.image = UIImage.fontAwesomeIcon(name: image, style: style ?? .regular, textColor: color ?? .black, size: imageSize)
