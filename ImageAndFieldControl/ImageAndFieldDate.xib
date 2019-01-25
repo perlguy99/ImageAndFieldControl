@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageAndFieldDate" customModule="ImageAndFieldControl" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="LAM-LS-bew" id="Qln-Hv-xdi"/>
+                <outlet property="imageView" destination="zcf-mR-DjC" id="HbO-hr-phM"/>
+                <outlet property="imageViewHeightConstraint" destination="vLU-lT-Vty" id="6bE-ik-qKR"/>
+                <outlet property="imageViewLeadingConstraint" destination="nfL-zC-E5D" id="cbf-PP-Hzm"/>
+                <outlet property="pickerLabel" destination="fyd-NW-Rhu" id="bW5-Qz-1td"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAM-LS-bew" userLabel="Container View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zcf-mR-DjC">
+                            <rect key="frame" x="8" y="5" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="zcf-mR-DjC" secondAttribute="height" multiplier="1:1" id="1SI-BR-aAx"/>
+                                <constraint firstAttribute="height" constant="40" id="vLU-lT-Vty"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyd-NW-Rhu" customClass="PaddedLabel" customModule="ImageAndFieldControl" customModuleProvider="target">
+                            <rect key="frame" x="56" y="5" width="311" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="fyd-NW-Rhu" firstAttribute="top" secondItem="LAM-LS-bew" secondAttribute="top" constant="5" id="2kw-DE-SXm"/>
+                        <constraint firstAttribute="trailing" secondItem="fyd-NW-Rhu" secondAttribute="trailing" constant="8" id="7BE-JC-33G"/>
+                        <constraint firstItem="zcf-mR-DjC" firstAttribute="centerY" secondItem="LAM-LS-bew" secondAttribute="centerY" id="Pun-CC-zIt"/>
+                        <constraint firstItem="fyd-NW-Rhu" firstAttribute="leading" secondItem="zcf-mR-DjC" secondAttribute="trailing" constant="8" id="afr-fp-Gj8"/>
+                        <constraint firstAttribute="bottom" secondItem="fyd-NW-Rhu" secondAttribute="bottom" constant="5" id="nUR-hp-7Vk"/>
+                        <constraint firstItem="zcf-mR-DjC" firstAttribute="leading" secondItem="LAM-LS-bew" secondAttribute="leading" constant="8" id="nfL-zC-E5D"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="LAM-LS-bew" secondAttribute="bottom" id="MdV-BZ-3Xn"/>
+                <constraint firstItem="LAM-LS-bew" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oJx-mH-0ha"/>
+                <constraint firstItem="LAM-LS-bew" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sD4-CX-nl5"/>
+                <constraint firstAttribute="trailing" secondItem="LAM-LS-bew" secondAttribute="trailing" id="uce-Tv-LnG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

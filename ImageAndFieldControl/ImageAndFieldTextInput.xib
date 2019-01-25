@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageAndFieldTextInput" customModule="ImageAndFieldControl" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="vuP-Vc-Prs" id="8Kh-3v-6Mm"/>
+                <outlet property="imageView" destination="avp-mN-2Wu" id="uqs-sK-ipf"/>
+                <outlet property="imageViewHeightConstraint" destination="JCg-rh-S8t" id="utw-k6-rEW"/>
+                <outlet property="imageViewLeadingConstraint" destination="4tg-sa-62Y" id="H55-U7-MSf"/>
+                <outlet property="textField" destination="OZT-Xf-ho7" id="x1z-b0-fX6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuP-Vc-Prs" userLabel="Container View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="avp-mN-2Wu">
+                            <rect key="frame" x="8" y="5" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="avp-mN-2Wu" secondAttribute="height" multiplier="1:1" id="8dM-1A-uXX"/>
+                                <constraint firstAttribute="height" constant="40" id="JCg-rh-S8t"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZT-Xf-ho7">
+                            <rect key="frame" x="56" y="5" width="311" height="40"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="avp-mN-2Wu" firstAttribute="leading" secondItem="vuP-Vc-Prs" secondAttribute="leading" constant="8" id="4tg-sa-62Y"/>
+                        <constraint firstAttribute="trailing" secondItem="OZT-Xf-ho7" secondAttribute="trailing" constant="8" id="89f-gY-CqE"/>
+                        <constraint firstItem="OZT-Xf-ho7" firstAttribute="leading" secondItem="avp-mN-2Wu" secondAttribute="trailing" constant="8" id="9eZ-OH-Npf"/>
+                        <constraint firstItem="avp-mN-2Wu" firstAttribute="centerY" secondItem="vuP-Vc-Prs" secondAttribute="centerY" id="Ji9-hR-6KC"/>
+                        <constraint firstItem="OZT-Xf-ho7" firstAttribute="top" secondItem="vuP-Vc-Prs" secondAttribute="top" constant="5" id="c8Q-nS-4BQ"/>
+                        <constraint firstAttribute="bottom" secondItem="OZT-Xf-ho7" secondAttribute="bottom" constant="5" id="nbd-cM-j4D"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vuP-Vc-Prs" secondAttribute="trailing" id="Mif-5Z-hZM"/>
+                <constraint firstItem="vuP-Vc-Prs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jLI-v1-EeB"/>
+                <constraint firstAttribute="bottom" secondItem="vuP-Vc-Prs" secondAttribute="bottom" id="nzo-uB-tGl"/>
+                <constraint firstItem="vuP-Vc-Prs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="reb-T1-dFZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>
