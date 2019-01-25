@@ -39,7 +39,7 @@ public class ImageAndFieldBase: UIView {
     }
     
     
-    public func setFAImage(image: FontAwesome, style: FontAwesomeStyle?, color: UIColor?, size: CGFloat?) {
+    public func setFAImage(image: FontAwesome, style: FontAwesomeStyle? = .regular, color: UIColor? = .black, size: CGFloat? = 30.0) {
         var imageSize = CGSize(width: 30, height: 30)
         
         if let size = size {
