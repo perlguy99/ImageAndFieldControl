@@ -15,9 +15,6 @@ public class ImageAndFieldBase: UIView {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     
-//    @IBOutlet weak var pickerLabel: PaddedLabel!
-
-    
     @IBOutlet weak var imageViewHeightConstraint: NSLayoutConstraint! {
         didSet {
             imageView.size = CGSize(width: imageViewHeightConstraint.constant, height: imageViewHeightConstraint.constant)
@@ -42,13 +39,14 @@ public class ImageAndFieldBase: UIView {
     }
     
     
-    @IBInspectable public var FA_imageName: String? {
-        didSet {
-            guard let FA_imageName = FA_imageName else { return }
-            if let faImage = FontAwesome(rawValue: FA_imageName) {
-                imageView.image = UIImage.fontAwesomeIcon(name: faImage, style: FontAwesomeStyle.regular, textColor: UIColor.black, size: CGSize(width: 30, height: 30))
-            }
+    public func setFAImage(image: FontAwesome, style: FontAwesomeStyle?, color: UIColor?, size: CGFloat?) {
+        var imageSize = CGSize(width: 30, height: 30)
+        
+        if let size = size {
+            imageSize = CGSize(width: size, height: size)
         }
+        
+        imageView.image = UIImage.fontAwesomeIcon(name: image, style: style ?? .regular, textColor: color ?? .black, size: imageSize)
     }
     
     
@@ -62,19 +60,8 @@ public class ImageAndFieldBase: UIView {
     }
     
     
-    @objc func viewTapped(_ sender: Any) {
-    }
-    
-    
-//    public var currentValue: String? {
-//        return pickerLabel.text
-//    }
-    
-//    public func setText(text: String) {
-//        pickerLabel.textColor = fontColor?.withAlphaComponent(1)
-//        pickerLabel.text = text
-//    }
-    
+    @objc func viewTapped(_ sender: Any) { }
+  
     
     @IBInspectable
     public var bgColor: UIColor = .white {
@@ -82,32 +69,6 @@ public class ImageAndFieldBase: UIView {
             containerView.backgroundColor = bgColor
         }
     }
-    
-    
-//    @IBInspectable
-//    public var placeholderText: String? {
-//        didSet {
-//            pickerLabel.textColor = fontColor?.withAlphaComponent(0.6)
-//            pickerLabel.text      = placeholderText
-//        }
-//    }
-    
-    
-//    @IBInspectable
-//    public var fontSize: CGFloat = 16 {
-//        didSet {
-//            pickerLabel.font = pickerLabel.font.withSize(fontSize)
-//        }
-//    }
-    
-    
-//    @IBInspectable
-//    public var fontColor: UIColor? {
-//        didSet {
-//            pickerLabel.textColor = fontColor
-//        }
-//    }
-    
     
     
     // Outer border
@@ -170,30 +131,6 @@ public class ImageAndFieldBase: UIView {
             imageViewHeightConstraint.constant = imageHeight
         }
     }
-    
-    
-    // Label border
-//    @IBInspectable
-//    public var labelBorderColor: UIColor? {
-//        didSet {
-//            pickerLabel.borderColor = labelBorderColor
-//        }
-//    }
-    
-//    @IBInspectable
-//    public var labelBorderWidth: CGFloat = 0 {
-//        didSet {
-//            pickerLabel.borderWidth = labelBorderWidth
-//        }
-//    }
-    
-//    @IBInspectable
-//    public var labelBorderCornerRadius: CGFloat = 0 {
-//        didSet {
-//            pickerLabel.layer.cornerRadius = labelBorderCornerRadius
-//        }
-//    }
-    
     
     
     // MARK: - Interface Builder
