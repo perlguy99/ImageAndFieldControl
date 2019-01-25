@@ -10,7 +10,7 @@ import UIKit
 import FontAwesome_swift
 
 @IBDesignable
-class ImageAndFieldTextInput: ImageAndFieldBase {
+public class ImageAndFieldTextInput: ImageAndFieldBase {
     
     @IBOutlet weak var textField: UITextField!
     
